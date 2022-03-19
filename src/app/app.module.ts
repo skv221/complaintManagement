@@ -12,6 +12,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { GenerateComponent } from './components/generate/generate.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     FeedbackComponent,
     SignupComponent,
     LandingPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GenerateComponent
   ],
   imports: [
     BrowserModule,

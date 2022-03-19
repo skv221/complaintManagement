@@ -51,6 +51,7 @@ body{
   will-change: box-shadow,transform;
   font-size: 18px;
   width: 200px;
+  margin: 20px;
 }
 
 .button-29:focus {
@@ -65,4 +66,19 @@ body{
 .button-29:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+.input
+{
+  width: 70%;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #000;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.link
+{
+  text-decoration: none;
+  color: #3c4fe0;
 }
