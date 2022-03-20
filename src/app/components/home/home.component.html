@@ -1,8 +1,20 @@
 <ul class="navbar">
     <li><h1>COMPLAINTS</h1></li>
-    <li><a  class="navElements" [class.active]="comp===1" (click)="comp=1">Generate form</a></li>
+    <li><a  class="navElements" [class.active]="comp===1" (click)="comp=1">Supply form</a></li>
     <li><a class="navElements" [class.active]="comp===2" (click)="comp=2">Positive Feedbacks</a></li>
     <li><a class="navElements" [class.active]="comp===3" (click)="comp=3">Negative Feedbacks</a></li>
     <li><a class="navElements" [class.active]="comp===4" (click)="comp=4">Spam Feedbacks</a></li>
     <li><a class="navElements" routerLink="/login">Log out</a></li>
-</ul> 
+</ul>
+<div *ngIf="comp===1">
+    <app-generate></app-generate>
+</div>
+<div *ngIf="comp===2">
+    <app-positive></app-positive>
+</div>
+<div *ngIf="comp===3">
+    <app-negative></app-negative>
+</div>
+<div *ngIf="comp===4">
+    <app-spam></app-spam>
+</div>

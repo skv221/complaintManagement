@@ -114,3 +114,9 @@ li .navElements.active {
 background-color: #654ea3;
 color: #fff;
 }
+
+.content
+{
+  margin-left:20%;
+  padding:1px 16px;
+}
