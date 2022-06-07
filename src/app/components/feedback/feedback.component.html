@@ -1,13 +1,13 @@
 <div class="container">
     <div *ngIf="pg===1">
         <h1>SUBMIT YOUR FEEDBACK</h1>
-        <input type="text" placeholder="Enter your Name" class="input">
-        <input type="email" placeholder="Enter your Email ID" class="input">
-        <textarea placeholder="Enter your feedback here..." class="input" rows="5"></textarea><br>
-        <button class="button-29" (click)="pg=2">Submit</button>
+        <input type="text" placeholder="Enter your Name" class="input" [(ngModel)]="name">
+        <input type="email" placeholder="Enter your Email ID" class="input" [(ngModel)]="email">
+        <textarea placeholder="Enter your feedback here..." class="input" rows="5" [(ngModel)]="feedback"></textarea><br>
+        <button class="button-29" (click)="submitFeedback()">Submit</button>
     </div>
     <div *ngIf="pg===2">
         <h1>Thank you for your feedback</h1>
-        <p>We'll definitely notify once prior action is taken on your complaint.</p>
+        <p>We'll definitely notify once prior action is taken on your complaint.</p> 
     </div>
 </div>

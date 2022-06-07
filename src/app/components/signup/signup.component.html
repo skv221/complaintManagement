@@ -1,8 +1,23 @@
 <div class="container">
     <h1>SIGNUP TO MANAGE COMPLAINTS</h1>
-    <input type="email" placeholder="Enter your Email ID" class="input">
-    <input type="password" placeholder="Enter your Password" class="input">
-    <input type="password" placeholder="Re Enter your Password" class="input"><br>
-    <button class="button-29" routerLink="/login">Sign up</button>
-    <p>Already have an account? <a routerLink="/login" class="link">Log in</a></p>
+    <div *ngIf="pg===1">
+        <input type="text" placeholder="Enter your Institution's name" class="input" [(ngModel)]="name">
+        <input type="email" placeholder="Enter your Institution's Email ID" class="input" [(ngModel)]="email">
+        <input type="text" placeholder="Enter your Institution's phone number" class="input" [(ngModel)]="phone"><br>
+        <button class="button-29" (click)="navigate()">Next</button>
+    </div>
+    <div *ngIf="pg===2">
+        <select class="input" [(ngModel)]="type">
+            <option value="" disabled>Enter your Institution's type</option>
+            <option value="School">School</option>
+            <option value="College">College</option>
+            <option value="Others">Others</option>
+        </select><br>
+        <input type="password" placeholder="Enter your Password" class="input" [(ngModel)]="pass">
+        <input type="password" placeholder="Re Enter your Password" class="input" [(ngModel)]="cpass"><br>
+        <button class="button-29" (click)="pg=1">Previous</button>
+        <button class="button-29" (click)="signup()">Sign up</button>
+    </div>
+    <p>Already have an account? <a routerLink="/login" class="link">Log in</a></p> 
 </div>
+<div id="snackbar" [class.show]="openSB">{{warning}}</div>

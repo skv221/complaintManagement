@@ -11,8 +11,8 @@ const routes: Routes = [
   {path:"",component:LandingPageComponent},
   {path:"login",component:LoginComponent},
   {path:"signup",component:SignupComponent},
-  {path:"feedback",component:FeedbackComponent},
-  {path:"home",component:HomeComponent},
+  {path:"feedback/:id",component:FeedbackComponent},
+  {path:"home/:id",component:HomeComponent},
   {path:"**",component:PageNotFoundComponent},
 ];
 

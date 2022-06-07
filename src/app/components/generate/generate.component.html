@@ -1,8 +1,11 @@
 <div class="container content">
-    <h1>Supply the form for getting feedback</h1>
-    <p>The below link contains form to get feedback from the customer. Click the button to copy it and
-        share to your customers.
+    <h1>{{loggedInstitute.name}}</h1>
+    <h3>Email: {{loggedInstitute.email}}</h3>
+    <h3>Phone: {{loggedInstitute.phone}}</h3>
+    <h3>Type: {{loggedInstitute.type}}</h3>
+    <h3>No. of feedbacks: {{loggedInstitute.complaints.length}}</h3>
+    <p>Click the button to copy the link and
+        share to your customers to get feedbacks.
     </p>
-    <input type="text" class="input" value="http://localhost:4200/feedback" disabled>
-    <button class="button-29" (click)="copyMessage(copyMsg)">{{buttonText}}</button>
+    <button class="button-29" (click)="copyMessage(copyMsg)">{{buttonText}}</button> 
 </div>
