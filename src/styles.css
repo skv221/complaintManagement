@@ -151,8 +151,8 @@ color: #fff;
 }
 
 .flip-card-front {
-  background-color: rgb(189, 255, 180);
-  color: black;
+  background-color: rgb(88, 165, 78);
+  color: rgb(255, 255, 255);
   padding: 10px;
 
 }

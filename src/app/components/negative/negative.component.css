@@ -1,0 +1,12 @@
+.content
+{
+    margin-left: 20%;
+    background-color: rgb(255, 255, 255);
+}
+
+.flip-card-front {
+    background-color: rgb(253, 95, 95);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+  
+  }
