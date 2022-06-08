@@ -1,11 +1,11 @@
 <div class="content">
-    <h1>Spam Feedbacks</h1>
+    <h1>Spam Feedbacks</h1><a class="link" style="float: right;margin-top: -50px;" (click)="delete()">Delete all</a>
         <div class="flip-card" *ngFor="let review of reviews">
             <div class="flip-card-inner">
               <div class="flip-card-back">
                 <p>Name:<br>{{review.name}}</p>
+                <p>Class:<br>{{review.class}}</p>
                 <p>Email:<br>{{review.email}}</p>
-                <button class="button-4">Notify new service</button>
               </div>
               <div class="flip-card-front">
                 <p>"{{review.feedback}}"</p>
@@ -13,3 +13,4 @@
             </div>
         </div>
 </div>
+<div id="snackbar" [class.show]="openSB">{{warning}}</div>

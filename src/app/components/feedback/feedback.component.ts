@@ -24,6 +24,7 @@ export class FeedbackComponent implements OnInit {
   }
   email="";
   name="";
+  class="";
   feedback="";
   analysis!:object;
   warning="";
@@ -42,8 +43,10 @@ export class FeedbackComponent implements OnInit {
         var complaint={
           email:this.email,
           name:this.name,
+          class:this.class,
           feedback:this.feedback,
-          analysis:this.analysis
+          analysis:this.analysis,
+          status:"Viewed"
         };
         this.loggedInstitute.complaints.push(complaint);
         this._feedbackService.updateInstitute(this.loggedInstitute)

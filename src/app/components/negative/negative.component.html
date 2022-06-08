@@ -4,8 +4,15 @@
             <div class="flip-card-inner">
               <div class="flip-card-back">
                 <p>Name:<br>{{review.name}}</p>
+                <p>Class:<br>{{review.class}}</p>
                 <p>Email:<br>{{review.email}}</p>
-                <button class="button-4">Notify new service</button>
+                <p>Status:</p>
+                <select class="input" [(ngModel)]="review.status">
+                  <option value="Viewed">Viewed</option>
+                  <option value="Taking Action">Taking action</option>
+                  <option value="Resolved">Resolved</option>
+              </select><br>
+                <button class="button-4" [disabled]="review.status!=='Resolved'">Notify the student</button>
               </div>
               <div class="flip-card-front">
                 <p>"{{review.feedback}}"</p>

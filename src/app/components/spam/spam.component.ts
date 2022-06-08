@@ -15,6 +15,8 @@ export class SpamComponent implements OnInit {
   loggedInstitute!: Institute;
   instituteID!: string | null;
   reviews!: any[];
+  warning="";
+  openSB=false;
 
   ngOnInit(): void {
     let id = this.route.snapshot.paramMap.get('id');
@@ -24,6 +26,19 @@ export class SpamComponent implements OnInit {
       this.loggedInstitute=data
       this.reviews=this.loggedInstitute.complaints.filter(user=>user.analysis.score==0);
     });
+  }
+
+  delete(){
+    this.reviews=[];
+    this.warning="Spam feedbacks deleted";
+    this.openSnackBar();
+  }
+
+  openSnackBar() {
+    this.openSB=true;
+    setTimeout(()=>{
+      this.openSB=false;
+    },3000);
   }
 
 }
